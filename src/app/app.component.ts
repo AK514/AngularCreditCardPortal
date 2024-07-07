@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'creditCardAdminPortal';
+  public sidebarOpened=true;
+  public toggleSidebar(){
+    this.sidebarOpened=!this.sidebarOpened;
+  }
 }

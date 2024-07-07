@@ -1,0 +1,24 @@
+.header-spacer {
+    flex: 1 1 auto;
+  }
+  .header-toolbar{
+    background-color: azure;
+    .app-title{
+        padding-left: 20px;
+    }
+    .favIcon{
+        padding-right: 10px;
+    }
+  }
+  .sidenav{
+    background-color: #f5f5f5;
+    height: 100%;
+    width: 250px;
+  }
+  .mat_drawer_container{
+    height: 100%;
+    border: 1px solid #ddd;
+    min-height: 100vh;
+  }
+
+  
