@@ -2,6 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CreditCard } from '../models/credit-card';
+ import { Product } from '../models/product';
+
+ export class Response{
+  constructor(
+    public count: number,
+    public response: Product,
+   
+  ){}
+ }
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +46,13 @@ export class CreditcardsService {
     const url = `${this.apiUrl}/${id}`;
     return this.httpClient.delete<void>(url);
   }
+  welcomeHelloWorld():Observable<Response>{
+    return this.httpClient.get<Response>("http://localhost:8081/product/getAllProducts");
+  }
+
+  // welcomeHelloWorld(){
+  //   return this.httpClient.get<ProductClass[]>("http://localhost:8081/product/getAllProducts");
+  // }
+
 
 }

@@ -101,4 +101,22 @@ export class CreditcardsComponent {
     this.creditCardMaxAmount=this.creditCards.filter( card=> card.maxCredit>3000).length;
   }
 
+  getWelcome(){
+    this.creditCardService.welcomeHelloWorld().subscribe(
+      response => this.handleResponse(response),
+      error => this.handleError(error)     
+    );
+    
+  }
+  handleResponse(response : any){
+    console.log(response);
+  }
+  handleError(error :any){
+    console.log(error);
+  }
+
+
+
+  
+
 }
